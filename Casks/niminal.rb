@@ -4,15 +4,15 @@ cask "niminal" do
 
   url "https://github.com/martineastwood/niminal/releases/download/v#{version}/Niminal-#{version}-macos-arm64.dmg"
   name "Niminal"
-  desc "Live-coding audio language with a server, a tracker and a stage"
+  desc "Live-coding audio language with the audio engine built in"
   homepage "https://github.com/martineastwood/niminal"
 
   depends_on arch: :arm64
   depends_on macos: :ventura
 
-  # The download is one folder of apps and tools that find each other, so it is installed as it comes.
+  # The download is one folder: Stage, which has the audio engine inside it, the `niminal` command (offline
+  # render, `niminal play`, and the language server), the VS Code extension and the examples. It is installed as it comes.
   binary "#{appdir}/Niminal/bin/niminal"
-  binary "#{appdir}/Niminal/bin/niminal-live"
   artifact "Niminal", target: "#{appdir}/Niminal"
 
   # The apps are ad-hoc signed, not notarized, so macOS would stop each one on first use.
