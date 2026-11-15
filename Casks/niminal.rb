@@ -1,6 +1,6 @@
 cask "niminal" do
-  version "0.0.1-alpha.13"
-  sha256 "262cd5a3f1812117e7b3aa818a58fc128109ba12d5a323fbc3116486becb70e7"
+  version "0.0.1"
+  sha256 "1e7014ef1d294e2f3747291f501554fc6cd1542d8d8c35aa901cb2ffe7913213"
 
   url "https://github.com/martineastwood/niminal/releases/download/v#{version}/Niminal-#{version}-macos-arm64.dmg"
   name "Niminal"
